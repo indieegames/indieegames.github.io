@@ -1,0 +1,8 @@
+# app-ads.txt for Indiee (https://indieegames.github.io)
+# Authorised sellers of ads in Indiee's apps (Last Lantern). Format: ad system, publisher id, relationship, cert id.
+
+# Google AdMob
+google.com, pub-1116856381033535, DIRECT, f08c47fec0942fa0
+
+# Unity LevelPlay (ironSource) and Unity Ads: paste the lines from the LevelPlay dashboard below
+# (Monetize > Setup > app-ads.txt), then rebuild with Tools/Site/build_site.py.

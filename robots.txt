@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://indieegames.github.io/sitemap.xml
