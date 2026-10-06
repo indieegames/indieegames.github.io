@@ -171,28 +171,36 @@
     setTimeout(() => { b.textContent = label; }, 1800);
   }));
 
-  // Dialogs: trailer and screenshots.
+  // The trailer plays from YouTube's privacy-enhanced domain, and only once someone presses play: until then the
+  // page talks to nobody but its own host.
+  const youtube = (id) => Object.assign(document.createElement("iframe"), {
+    src: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`,
+    title: "Last Lantern trailer",
+    allow: "autoplay; encrypted-media; picture-in-picture; fullscreen",
+    allowFullscreen: true,
+    referrerPolicy: "strict-origin-when-cross-origin",
+  });
+
+  // Dialogs: trailer and screenshots. Closing drops the player, which stops it.
   $$("dialog").forEach((d) => {
     d.addEventListener("click", (e) => { if (e.target === d) d.close(); });
     $("[data-modal-close]", d)?.addEventListener("click", () => d.close());
-    d.addEventListener("close", () => $$("video", d).forEach((v) => v.pause()));
+    // Watch the open attribute itself: some browsers skip the close event (seen with an iframe focused inside).
+    const stop = () => { if (!d.open) $$("[data-yt]", d).forEach((f) => f.replaceChildren()); };
+    new MutationObserver(stop).observe(d, { attributes: true, attributeFilter: ["open"] });
+    d.addEventListener("close", stop);
   });
   const trailer = $("[data-trailer-modal]");
   $$("[data-trailer]").forEach((b) => b.addEventListener("click", () => {
     if (!trailer || !trailer.showModal) { location.href = "/last-lantern/#trailer"; return; }
-    const v = $("video", trailer);
-    if (!v.getAttribute("src")) v.src = v.dataset.src;
+    const slot = $("[data-yt]", trailer);
+    slot.replaceChildren(youtube(slot.dataset.yt));
     trailer.showModal();
-    v.play().catch(() => {});
   }));
   $$("[data-player]").forEach((p) => {
-    const v = $("video", p);
     $("[data-play]", p).addEventListener("click", () => {
-      v.src = v.dataset.src;
-      v.controls = true;
+      p.append(youtube(p.dataset.yt));
       p.classList.add("is-playing");
-      v.play().catch(() => {});
-      v.focus();
     });
   });
 

@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..600&display=swap">
 <link rel="preload" href="/fonts/IndieeSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=6b071cfa">
+<link rel="stylesheet" href="/css/site.css?v=c0de60ab">
 <script>document.documentElement.classList.add("js")</script>
 
 </head>
@@ -89,10 +89,11 @@
 
 <section class="ll-section ll-section--trailer" id="trailer">
   <div class="wrap">
-    <div class="player reveal" data-player>
-      <video playsinline preload="none" poster="/games/last-lantern/trailer-poster.webp" data-src="/games/last-lantern/trailer.mp4" aria-label="Last Lantern trailer"></video>
-      <button class="player__play" type="button" data-play><span class="player__ring"><svg class="i i--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span><span class="pixel">Play trailer</span><small>0:57 · sound on</small></button>
+    <div class="player reveal" data-player data-yt="lwV5QllFVqA">
+      <img class="player__poster" src="/games/last-lantern/trailer-poster.webp" alt="" width="1920" height="1080" loading="lazy">
+      <button class="player__play" type="button" data-play><span class="player__ring"><svg class="i i--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span><span class="pixel">Play trailer</span><small>0:57 · plays from YouTube</small></button>
     </div>
+    <p class="player__note"><a href="https://youtu.be/lwV5QllFVqA" rel="noopener">Watch it on YouTube<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></p>
   </div>
 </section>
 
@@ -279,6 +280,10 @@
  "playMode": ["SinglePlayer", "CoOp"], "numberOfPlayers": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 4},
  "gamePlatform": ["Android", "Windows", "macOS", "Web browser"],
  "author": {"@type": "Organization", "name": "Indiee", "url": "https://indieegames.github.io/"},
+ "trailer": {"@type": "VideoObject", "name": "Last Lantern – Official Trailer", "uploadDate": "2026-10-06",
+   "description": "Official trailer for Last Lantern, a pixel-art survival roguelite with online co-op for four.",
+   "thumbnailUrl": "https://i.ytimg.com/vi/lwV5QllFVqA/maxresdefault.jpg",
+   "embedUrl": "https://www.youtube-nocookie.com/embed/lwV5QllFVqA", "contentUrl": "https://youtu.be/lwV5QllFVqA"},
  "description": "A pixel-art survival roguelite with online co-op for four."}
 </script>
 
@@ -309,10 +314,10 @@
   </div>
   <div class="wrap footer__base">
     <span>© 2026 Indiee. All rights reserved.</span>
-    <span>No cookies, no trackers on this site.</span>
+    <span>No cookies, no trackers. YouTube loads only if you play the trailer.</span>
   </div>
 </footer>
 
-<script src="/js/site.js?v=6b071cfa" defer></script>
+<script src="/js/site.js?v=c0de60ab" defer></script>
 </body>
 </html>
