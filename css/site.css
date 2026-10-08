@@ -298,6 +298,12 @@ a.store:hover { background: rgb(246 234 212 / .14); border-color: var(--amber); 
 .hero-card[aria-pressed="true"] .hero-card__stage::after { content: "Ascended"; position: absolute; top: 16px; left: 22px; padding: 4px 10px; border-radius: 6px; background: var(--accent); color: var(--night); font: 16px/1 var(--pixel); text-transform: uppercase; }
 .hero-card__name { font: 700 32px/1 var(--display); color: var(--parch); }
 .hero-card__title { color: var(--accent); font-size: 16px; }
+/* The secret hero: a "?" and a riddle, nothing to press. */
+.hero-card--secret { cursor: default; border-style: dashed; }
+.hero-card--secret:hover { translate: none; }
+.hero-card__mystery { font: 96px/1 var(--pixel); color: color-mix(in srgb, var(--accent) 80%, white); text-shadow: 0 0 24px var(--accent); margin-bottom: 40px; animation: mystery 3s ease-in-out infinite; }
+@keyframes mystery { 50% { opacity: .55; translate: 0 -6px; } }
+@media (prefers-reduced-motion: reduce) { .hero-card__mystery { animation: none; } }
 .hero-card__desc { color: var(--muted); font-size: 15.5px; line-height: 1.55; }
 .hero-card__weapon { display: inline-flex; align-items: center; gap: 10px; margin-top: 6px; padding: 6px 12px 6px 8px; border-radius: 10px; background: rgb(246 234 212 / .06); font-weight: 700; font-size: 14px; }
 .hero-card__weapon img { width: 32px; height: 32px; }

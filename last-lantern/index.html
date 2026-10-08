@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Last Lantern · Indiee</title>
-<meta name="description" content="Last Lantern is a pixel-art survival roguelite by Indiee. Your hero fights on their own: you move, dodge and build. Six heroes, endless hordes, online co-op for four.">
+<meta name="description" content="Last Lantern is a pixel-art survival roguelite by Indiee. Your hero fights on their own: you move, dodge and build. Eight heroes and a secret one, 52 weapons, eight paths with their own monsters, online co-op for four.">
 <link rel="canonical" href="https://indieegames.github.io/last-lantern/">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Indiee">
 <meta property="og:title" content="Last Lantern · Indiee">
-<meta property="og:description" content="Last Lantern is a pixel-art survival roguelite by Indiee. Your hero fights on their own: you move, dodge and build. Six heroes, endless hordes, online co-op for four.">
+<meta property="og:description" content="Last Lantern is a pixel-art survival roguelite by Indiee. Your hero fights on their own: you move, dodge and build. Eight heroes and a secret one, 52 weapons, eight paths with their own monsters, online co-op for four.">
 <meta property="og:url" content="https://indieegames.github.io/last-lantern/">
 <meta property="og:image" content="https://indieegames.github.io/games/last-lantern/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..600&display=swap">
 <link rel="preload" href="/fonts/IndieeSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=c0de60ab">
+<link rel="stylesheet" href="/css/site.css?v=ffd4f794">
 <script>document.documentElement.classList.add("js")</script>
 
 </head>
@@ -79,8 +79,9 @@
       <div><dt>Genre</dt><dd>Survival roguelite</dd></div>
       <div><dt>Players</dt><dd>1 to 4, online co-op; AI companions offline</dd></div>
       <div><dt>Platforms</dt><dd>Android, Windows &amp; Mac, browser</dd></div>
-      <div><dt>Heroes</dt><dd>6, each with a final form</dd></div>
-      <div><dt>Paths</dt><dd>8, each with its own boss</dd></div>
+      <div><dt>Heroes</dt><dd>8 and a secret one, each with a final form</dd></div>
+      <div><dt>Arsenal</dt><dd>52 weapons, 20 relics</dd></div>
+      <div><dt>Paths</dt><dd>8, each with its own monsters, mini-bosses and boss</dd></div>
       <div><dt>Status</dt><dd><span class="dot"></span>In development</dd></div>
       <div><dt>Studio</dt><dd>Indiee</dd></div>
     </dl>
@@ -105,7 +106,7 @@
     </header>
     <ol class="loop">
       <li class="reveal"><img class="px" src="/games/last-lantern/icons/lantern_blade.png" alt="" width="16" height="16"><h3>Survive</h3><p>Weapons fire on their own. You steer, dodge and pull the horde where you want it.</p></li>
-      <li class="reveal"><img class="px" src="/games/last-lantern/icons/kindred.png" alt="" width="16" height="16"><h3>Choose</h3><p>Every level-up deals new weapons and relics. Six weapon slots, six relic slots, endless builds.</p></li>
+      <li class="reveal"><img class="px" src="/games/last-lantern/icons/kindred.png" alt="" width="16" height="16"><h3>Choose</h3><p>Every level-up deals new weapons and relics. Six weapon slots, six relic slots (a merchant's Satchel adds one of each), endless builds.</p></li>
       <li class="reveal"><img class="px" src="/games/last-lantern/icons/eclipse.png" alt="" width="16" height="16"><h3>Awaken</h3><p>Max a weapon, hold its relic, crack a chest: it Awakens. Fuse two Awakened weapons into one legend.</p></li>
       <li class="reveal"><img class="px" src="/games/last-lantern/icons/dawnbreaker.png" alt="" width="16" height="16"><h3>Ascend</h3><p>Find your hero's Sigil and they take their final form, signature weapon and all.</p></li>
     </ol>
@@ -116,7 +117,7 @@
   <div class="wrap">
     <header class="ll-head reveal">
       <p class="pixel ll-kicker">Choose your bearer</p>
-      <h2>Six heroes. Six final forms.</h2>
+      <h2>Eight heroes. Eight final forms. And one more.</h2>
       <p>Tap a hero to see them Ascended.</p>
     </header>
     <div class="heroes">
@@ -156,6 +157,23 @@
         <span class="hero-card__desc">Brews poisons from the night's own fungus. Her clouds linger longer and spread wider.</span>
         <span class="hero-card__weapon"><img class="px" src="/games/last-lantern/icons/poison_flask.png" alt="" width="16" height="16">Poison Flask</span>
       </button>
+      <button class="hero-card reveal" type="button" aria-pressed="false" data-hero-card style="--accent:#FF8FB8">
+        <span class="hero-card__stage"><i class="sprite sprite--idle" style="--sheet:url(/games/last-lantern/sprites/bard_idle.png)"></i><i class="sprite sprite--idle sprite--asc" style="--sheet:url(/games/last-lantern/sprites/bard_asc_idle.png)"></i></span>
+        <span class="hero-card__name">Lyra</span><span class="pixel hero-card__title">The Wandersong</span>
+        <span class="hero-card__desc">A travelling singer who swears the night goes quiet when she plays. Her songs carry far and linger long.</span>
+        <span class="hero-card__weapon"><img class="px" src="/games/last-lantern/icons/resonant_lute.png" alt="" width="16" height="16">Resonant Lute</span>
+      </button>
+      <button class="hero-card reveal" type="button" aria-pressed="false" data-hero-card style="--accent:#7FB8FF">
+        <span class="hero-card__stage"><i class="sprite sprite--idle" style="--sheet:url(/games/last-lantern/sprites/tinker_idle.png)"></i><i class="sprite sprite--idle sprite--asc" style="--sheet:url(/games/last-lantern/sprites/tinker_asc_idle.png)"></i></span>
+        <span class="hero-card__name">Brann</span><span class="pixel hero-card__title">The Tinker</span>
+        <span class="hero-card__desc">Builds what the night can't break. His contraptions keep firing long after he has moved on.</span>
+        <span class="hero-card__weapon"><img class="px" src="/games/last-lantern/icons/clockwork_turret.png" alt="" width="16" height="16">Clockwork Turret</span>
+      </button>
+      <div class="hero-card hero-card--secret reveal" style="--accent:#B9B6FF">
+        <span class="hero-card__stage"><span class="hero-card__mystery" aria-hidden="true">?</span></span>
+        <span class="hero-card__name">???</span><span class="pixel hero-card__title">A secret</span>
+        <span class="hero-card__desc">Something waits for those who stand still.</span>
+      </div>
     </div>
   </div>
 </section>
@@ -165,7 +183,7 @@
     <header class="ll-head reveal">
       <p class="pixel ll-kicker">Topple the tyrants</p>
       <h2>Eight paths. Eight things in the dark.</h2>
-      <p>Every path is its own night with its own ground: open fields with hazards, a causeway, islands, bone halls and a climb. A boss waits at the end of each.</p>
+      <p>Every path is its own night with its own ground: open fields with hazards, a causeway, islands, bone halls and a climb. Each has its own monsters and two mini-bosses you won't meet anywhere else, and a boss waits at the end.</p>
     </header>
     <div class="paths">
       <article class="path reveal" style="--tint:#3F7A3A;--glow:#9BE36B">
@@ -232,6 +250,9 @@
       <article class="mode reveal"><img class="px" src="/games/last-lantern/icons/starfall.png" alt="" width="16" height="16"><h3>Endless Night</h3><p>No finish line. Survival time is the score, kept for solo and for every party size.</p></article>
       <article class="mode reveal"><img class="px" src="/games/last-lantern/icons/curse.png" alt="" width="16" height="16"><h3>Long Night</h3><p>Beat the boss, then stay the night. It only gets worse, and the boss keeps coming back.</p></article>
       <article class="mode reveal"><img class="px" src="/games/last-lantern/icons/storm_call.png" alt="" width="16" height="16"><h3>Daily Night</h3><p>One seeded run a day with two twists and the same kit for everyone.</p></article>
+      <article class="mode reveal"><img class="px" src="/games/last-lantern/icons/misers_coin.png" alt="" width="16" height="16"><h3>Night events</h3><p>A wandering merchant, a cursed shrine that pays if you survive its curse, a lantern vigil to hold while the horde closes in.</p></article>
+      <article class="mode reveal"><img class="px" src="/games/last-lantern/icons/black_censer.png" alt="" width="16" height="16"><h3>Bestiary</h3><p>76 monsters and 24 bosses, each logged in your Journal the first time you meet it, with a line of lore.</p></article>
+      <article class="mode reveal"><img class="px" src="/games/last-lantern/icons/evolution.png" alt="" width="16" height="16"><h3>Secrets</h3><p>Every region hides its Chart, Sigils and a gilded cache off the beaten path. And there's one secret nobody will tell you.</p></article>
       <article class="mode reveal"><img class="px" src="/games/last-lantern/icons/chest_icon.png" alt="" width="16" height="16"><h3>Wardrobe</h3><p>Lantern flames, trails and hero outfits to wear. Your friends see them in co-op too.</p></article>
     </div>
   </div>
@@ -318,6 +339,6 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=c0de60ab" defer></script>
+<script src="/js/site.js?v=ffd4f794" defer></script>
 </body>
 </html>
