@@ -336,6 +336,8 @@ a.store:hover { background: rgb(246 234 212 / .14); border-color: var(--amber); 
 .ll-section--get { text-align: center; background: radial-gradient(ellipse 60% 70% at 50% 100%, rgb(255 150 50 / .16), transparent 70%); }
 .ll-get { display: grid; justify-items: center; gap: 18px; }
 .ll-get > p:not(.pixel) { color: var(--muted); font-size: 18px; max-width: 34em; }
+.ll-get > p.ll-community { font-size: 16px; }
+.ll-community a { color: var(--parch); text-decoration: underline; text-underline-offset: 3px; }
 .ll-get .stores { justify-content: center; margin-top: 10px; }
 
 /* sprites: sheets of square frames in a row */
