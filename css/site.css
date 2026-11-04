@@ -141,6 +141,14 @@ p { margin: 0; text-wrap: pretty; }
 .gamecard__tags b, .path__no b { color: var(--parch); font-weight: 400; }
 .gamecard__pitch { font-size: clamp(17px, 1.4vw, 19px); color: rgb(246 234 212 / .9); }
 .gamecard__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.gamecard + .gamecard { margin-top: 40px; }
+.gamecard--moonbow { background: #1B1434; color: #FFF4E0; padding-bottom: clamp(28px, 5vw, 64px); }
+.gamecard--moonbow .gamecard__art { object-position: 70% 40%; }
+.gamecard--moonbow .gamecard__dark { background: linear-gradient(90deg, rgb(27 20 52 / .94) 0%, rgb(27 20 52 / .62) 40%, rgb(27 20 52 / 0) 66%); }
+.gamecard--moonbow .gamecard__logo { width: min(100%, 400px); filter: drop-shadow(0 0 30px rgb(255 201 60 / .35)); }
+.gamecard__tags--moon { font: 800 15px/1.3 var(--display); letter-spacing: .04em; color: #FFC93C; }
+.gamecard__soon { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgb(13 9 32 / .6); border: 1.5px solid rgb(201 184 255 / .35); font: 700 13px/1 var(--body); }
+.gamecard__soon span { width: 9px; height: 9px; border-radius: 50%; background: #5FE3C0; box-shadow: 0 0 12px #5FE3C0; }
 .parade { position: absolute; left: 0; right: 0; bottom: 18px; height: 96px; pointer-events: none; container-type: inline-size; }
 .parade .sprite { position: absolute; bottom: 0; left: 0; --s: 3; animation: frames .6s steps(6) infinite, walk 14s linear infinite; animation-delay: 0s, var(--d); filter: drop-shadow(0 0 10px rgb(255 190 90 / .35)); }
 
@@ -438,6 +446,8 @@ a.store:hover { background: rgb(246 234 212 / .14); border-color: var(--amber); 
   .gamecard { align-items: end; padding-top: 220px; }
   .gamecard__dark { background: radial-gradient(circle at var(--lx) var(--ly), rgb(10 8 18 / 0) 0, rgb(10 8 18 / .2) 110px, rgb(10 8 18 / .7) 300px), linear-gradient(180deg, rgb(10 8 18 / 0) 0%, rgb(10 8 18 / .7) 34%, rgb(10 8 18 / .94) 62%); }
   .gamecard__art { object-position: 50% 64%; height: 56%; }
+  .gamecard--moonbow .gamecard__dark { background: linear-gradient(180deg, rgb(27 20 52 / 0) 0%, rgb(27 20 52 / .72) 36%, rgb(27 20 52 / .96) 62%); }
+  .gamecard--moonbow .gamecard__art { object-position: 64% 30%; }
 }
 @media (max-width: 620px) {
   body { font-size: 16px; }

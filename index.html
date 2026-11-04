@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..600&display=swap">
 <link rel="preload" href="/fonts/IndieeSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css?v=eae4f78f">
+<link rel="stylesheet" href="/css/site.css?v=d927cdcd">
 <script>document.documentElement.classList.add("js")</script>
 
 </head>
@@ -38,6 +38,7 @@
     </a>
     <nav class="nav__links" id="nav-links" aria-label="Main">
       <a href="/last-lantern/">Last Lantern</a>
+      <a href="/moonbow/">Moonbow</a>
       <a href="/#studio">Studio</a>
       <a href="/#dee">Meet Dee</a>
       <a href="/#contact">Contact</a>
@@ -103,7 +104,7 @@
 <section class="section section--cream" id="games">
   <div class="wrap">
     <header class="section-head reveal">
-      <p class="kicker">Our first game</p>
+      <p class="kicker">Our games</p>
       <h2>Light it up.</h2>
     </header>
     <article class="gamecard reveal" data-lantern>
@@ -132,6 +133,22 @@
         <i class="sprite sprite--run" style="--sheet:url(/games/last-lantern/sprites/alchemist_run.png);--d:-4.5s"></i>
         <i class="sprite sprite--run" style="--sheet:url(/games/last-lantern/sprites/bard_run.png);--d:-5.4s"></i>
         <i class="sprite sprite--run" style="--sheet:url(/games/last-lantern/sprites/tinker_run.png);--d:-6.3s"></i>
+      </div>
+    </article>
+    <article class="gamecard gamecard--moonbow reveal">
+      <picture>
+        <source type="image/webp" srcset="/games/moonbow/key-art-1280.webp 1280w, /games/moonbow/key-art-1920.webp 1920w, /games/moonbow/key-art-2880.webp 2880w" sizes="(min-width: 1280px) 1232px, 100vw">
+        <img class="gamecard__art" src="/games/moonbow/key-art-1920.webp" alt="Six chibi heroes charge across a moonlit garden under a rainbow, loosing glowing arrows at pink slimes." loading="lazy" width="1920" height="1080">
+      </picture>
+      <div class="gamecard__dark" aria-hidden="true"></div>
+      <div class="gamecard__body">
+        <p class="gamecard__soon"><span aria-hidden="true"></span>Coming soon</p>
+        <img class="gamecard__logo" src="/games/moonbow/logo.webp" alt="Moonbow" width="900" height="380" loading="lazy">
+        <p class="gamecard__tags gamecard__tags--moon">Arena shooter <b>•</b> One thumb, on your phone</p>
+        <p class="gamecard__pitch">Dodge, stop, loose the moonlight. Nine heroes, eight chapters under one moon and a boss at the end of every path. Coming to Android first.</p>
+        <div class="gamecard__actions">
+          <a class="btn btn--sun" href="/moonbow/">Meet Moonbow<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </article>
   </div>
@@ -247,6 +264,6 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=eae4f78f" defer></script>
+<script src="/js/site.js?v=d927cdcd" defer></script>
 </body>
 </html>
