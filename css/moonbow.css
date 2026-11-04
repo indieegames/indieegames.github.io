@@ -167,6 +167,10 @@
 .mb-glance dt { font: 800 11px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--mb-gold); margin-bottom: 6px; }
 .mb-glance dd { margin: 0; font-weight: 700; color: var(--mb-cream); }
 
+.mb-legal { margin-top: 18px; font-size: 14px; color: var(--mb-soft); }
+.mb-legal a { color: var(--mb-soft); text-underline-offset: 3px; }
+.mb-legal a:hover { color: var(--mb-gold); }
+
 /* screenshot zoom */
 .mb-zoom { padding: 0; border: 0; background: none; max-width: min(92vw, 460px); overflow: visible; }
 .mb-zoom::backdrop { background: rgb(10 6 26 / .82); backdrop-filter: blur(6px); }
